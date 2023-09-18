@@ -4,7 +4,16 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 
 int _printf(const char *format, ...);
+int _putchar(char c);
+int printNumber(long num, int count);
+int identifier_c(va_list arg);
+int identifier_d(va_list arg);
+int identifier_s(va_list arg);
+int (*selector(char str))(va_list arg);
+
 
 #endif
