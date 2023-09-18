@@ -12,6 +12,7 @@ int _printf(const char *format, ...)
 
 	int i;
 	int ncount = 0;
+
 	va_start(input, format);
 
 	if (format == NULL)
