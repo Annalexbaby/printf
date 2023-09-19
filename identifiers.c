@@ -1,9 +1,9 @@
 #include "main.h"
 
+
 /**
  * identifier_c - checks for the char identifier
  * @arg: input char
- * count: value
  * Return: count
  */
 
@@ -25,7 +25,7 @@ int identifier_c(va_list arg)
 
 int identifier_d(va_list arg)
 {
-	int count;
+	int count = 0;
 
 	int val = va_arg(arg, int);
 
