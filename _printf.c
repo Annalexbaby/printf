@@ -14,21 +14,22 @@ int _printf(const char *format, ...)
 	int ncount = 0;
 
 	va_start(input, format);
-
-
 	if (format == NULL)
 	{
 		return (-1);
 	}
-
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i] == 'c' || format[i] == 'd' || format[i] == 's')
+			if (format[i] == 'c' || format[i] == 's')
 			{
 				ncount += selector(format[i])(input);
+			}
+			else if (format[i] == 'd' || format[i] == 'i')
+			{
+				ncount += identifier_d(input);
 			}
 			else if (format[i] == '%')
 			{
@@ -46,6 +47,5 @@ int _printf(const char *format, ...)
 			ncount += _putchar(format[i]);
 		}
 	}
-
 	return (ncount);
 }
