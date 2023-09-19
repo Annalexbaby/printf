@@ -5,7 +5,6 @@
  * @format: pointer to chars
  * Return: number of characters printed
  */
-
 int _printf(const char *format, ...)
 {
 	va_list input;
@@ -47,5 +46,6 @@ int _printf(const char *format, ...)
 			ncount += _putchar(format[i]);
 		}
 	}
+	va_end(arguments);
 	return (ncount);
 }
