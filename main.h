@@ -14,6 +14,7 @@ int identifier_c(va_list arg);
 int identifier_d(va_list arg);
 int identifier_s(va_list arg);
 int (*selector(char str))(va_list arg);
+void printBinary(int num);
 
 
 #endif

@@ -57,3 +57,18 @@ int identifier_s(va_list arg)
 
 	return (count);
 }
+
+/**
+ * identifier_b - checks for binary
+ * @arg: input Binary
+ * Return: 32
+ */
+
+int identifier_b(va_list arg)
+{
+	int val = va_arg(arg, int);
+
+	printBinary(val);
+
+	return (32);
+}
