@@ -6,7 +6,7 @@
  * Return: return value stored in the address
  */
 
-int (*selector(char str))(va_list arg)
+int (*selector(char str))(va_list input)
 {
 	if (str == 'c')
 	{

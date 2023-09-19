@@ -46,6 +46,5 @@ int _printf(const char *format, ...)
 			ncount += _putchar(format[i]);
 		}
 	}
-	va_end(input);
 	return (ncount);
 }
