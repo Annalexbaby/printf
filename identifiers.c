@@ -7,7 +7,7 @@
  * Return: count
  */
 
-int identifier_c(va_list input)
+int identifier_c(va_list arg)
 {
 	int count;
 	char inputChar = va_arg(arg, int);
@@ -23,7 +23,7 @@ int identifier_c(va_list input)
  * Return: count
  */
 
-int identifier_d(va_list input)
+int identifier_d(va_list arg)
 {
 	int count;
 
@@ -40,7 +40,7 @@ int identifier_d(va_list input)
  * Return: count
  */
 
-int identifier_s(va_list input)
+int identifier_s(va_list arg)
 {
 	int count = 0;
 	char *ptr = va_arg(arg, char *);
@@ -64,7 +64,7 @@ int identifier_s(va_list input)
  * Return: 32
  */
 
-int identifier_b(va_list input)
+int identifier_b(va_list arg)
 {
 	int val = va_arg(arg, int);
 
