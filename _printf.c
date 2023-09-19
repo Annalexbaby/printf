@@ -18,18 +18,15 @@ int _printf(const char *format, ...)
 	{
 		return (-1);
 	}
+
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i] == 'c' || format[i] == 's')
+			if (format[i] == 'c' || format[i] == 'd' || format[i] == 's')
 			{
 				ncount += selector(format[i])(input);
-			}
-			else if (format[i] == 'd' || format[i] == 'i')
-			{
-				ncount += identifier_d(input);
 			}
 			else if (format[i] == '%')
 			{
@@ -39,7 +36,7 @@ int _printf(const char *format, ...)
 			{
 				ncount += _putchar('%');
 				ncount += _putchar(format[i]);
-				continue;
+				continue
 			}
 		}
 		else
