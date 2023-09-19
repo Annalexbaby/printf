@@ -29,9 +29,15 @@ int _printf(const char *format, ...)
 			{
 				ncount += selector(format[i])(input);
 			}
+			else if (format[i] == '%')
+			{
+				ncount += _putchar('%');
+			}
+
 			else
 			{
 				ncount += _putchar('%');
+				ncount += _putchar(format[i]);
 				continue;
 			}
 		}
