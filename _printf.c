@@ -10,9 +10,11 @@ int _printf(const char *format, ...)
 {
 	va_list input;
 
-	va_start(input, format);
 	int i;
 	int ncount = 0;
+
+	va_start(input, format);
+
 
 	if (format == NULL)
 	{
@@ -36,7 +38,7 @@ int _printf(const char *format, ...)
 			{
 				ncount += _putchar('%');
 				ncount += _putchar(format[i]);
-				continue
+				continue;
 			}
 		}
 		else
